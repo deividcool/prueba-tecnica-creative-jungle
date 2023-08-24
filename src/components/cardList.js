@@ -9,8 +9,6 @@ export default function CardList({ data, setData, searchText }) {
     const filteredData = searchText
         ? data.filter(item => item.id === searchText)
         : data;
-
-        console.log(searchText)
     const handleDelete = async (itemId) => {
         try {
             const updatedData = data.filter(item => item.id !== itemId);
